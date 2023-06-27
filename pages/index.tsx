@@ -19,10 +19,11 @@ export default function Index({ preview, allPosts }: IndexProps) {
 
   return (
     <>
-      <Layout preview={preview}>
+      <div>
         <Head>
           <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
         </Head>
+
         <Container>
           <Intro />
           {heroPost && (
@@ -37,7 +38,7 @@ export default function Index({ preview, allPosts }: IndexProps) {
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
-      </Layout>
+      </div>
     </>
   )
 }

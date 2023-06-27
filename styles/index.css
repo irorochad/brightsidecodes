@@ -1,5 +1,39 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-/* purgecss end ignore */
 @tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply dark:bg-gray-900 w-full max-w-screen-2xl mx-auto;
+  }
+}
+
+@layer utilities {
+  /* navbar backdrop style */
+  .navbar-backdrop {
+    background: rgb(32, 36, 44) 0% 0% no-repeat padding-box;
+    opacity: 0.9;
+  }
+  .heroLine {
+    background: linear-gradient(
+      143.6deg,
+      rgba(192, 132, 252, 0) 20.79%,
+      rgba(232, 121, 249, 0.26) 40.92%,
+      rgba(204, 171, 238, 0) 70.35%
+    );
+  }
+
+  /* 
+  On an input form, when a user enter the suggested input such as email,
+  the browser automatically adds a default background and text color to the input
+  The following lines of code helps to remove the default colors.
+  */
+  .rmDefault input:-webkit-autofill,
+  .rmDefault input:-webkit-autofill:hover,
+  .rmDefault input:-webkit-autofill:focus,
+  .rmDefault input:-webkit-autofill:active {
+    -webkit-text-fill-color: #3374ea !important;
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  }
+}
