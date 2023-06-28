@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import ThemeToggler from "../ToggleTheme"
+import ThemeToggler from '../ToggleTheme'
 
 import { BiMenuAltRight } from 'react-icons/bi'
 import { IoMdClose } from 'react-icons/io'

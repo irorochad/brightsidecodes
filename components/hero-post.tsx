@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import { DateField, ImageField, TitleField } from '@prismicio/types'
 import { PrismicText } from '@prismicio/react'

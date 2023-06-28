@@ -1,3 +1,4 @@
+import React from 'react'
 import { PrismicNextImage } from '@prismicio/next'
 import { ImageField } from '@prismicio/types'
 

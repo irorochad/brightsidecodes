@@ -1,3 +1,4 @@
+import React from 'react'
 import { asDate } from '@prismicio/helpers'
 import { DateField } from '@prismicio/types'
 

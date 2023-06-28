@@ -1,0 +1,7 @@
+node_modules
+.next
+*.config.js
+README.md
+*.json
+prismicio-types.d.ts
+slices/*

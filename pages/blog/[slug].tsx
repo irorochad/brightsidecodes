@@ -1,3 +1,4 @@
+import React from 'react'
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'

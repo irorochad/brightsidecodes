@@ -1,5 +1,5 @@
 import React from 'react'
-import Meta from "../components/meta";
+import Meta from '../components/meta'
 import Footer from '../components/Layouts/Footer'
 import Navbar from '../components/Layouts/Navbar'
 
@@ -10,7 +10,7 @@ interface LayoutProps {
 function Layout({ children }: LayoutProps) {
   return (
     <>
-    <Meta/> 
+      <Meta />
       <Navbar />
       {/* since the navbar is fixed, it's taken out of the page, any content under it
       will move behind it, to control that, we add a PT to the children/content below! */}
@@ -20,6 +20,3 @@ function Layout({ children }: LayoutProps) {
   )
 }
 export default Layout
-
-
-

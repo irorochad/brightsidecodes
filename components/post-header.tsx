@@ -1,3 +1,4 @@
+import React from 'react'
 import { PrismicText } from '@prismicio/react'
 import { asText, isFilled } from '@prismicio/helpers'
 import { DateField, ImageField, TitleField } from '@prismicio/types'
