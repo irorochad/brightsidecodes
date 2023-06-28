@@ -1,7 +1,7 @@
 import React from 'react'
 import { SliceZone } from '@prismicio/react'
-// eslint-disable-next-line
-import { Content } from '@prismicio/client'
+
+import type { Content } from '@prismicio/client'
 
 import { components } from '../slices'
 

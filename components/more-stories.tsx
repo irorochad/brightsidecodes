@@ -1,5 +1,5 @@
 import React from 'react'
-import { Content } from '@prismicio/client'
+import type { Content } from '@prismicio/client'
 
 import PostPreview from '../components/post-preview'
 
