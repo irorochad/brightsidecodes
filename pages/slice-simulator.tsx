@@ -8,7 +8,6 @@ import state from '../.slicemachine/libraries-state.json'
 export default function SliceSimulatorPage() {
   return (
     <SliceSimulator
-      // eslint-disable-next-line
       sliceZone={(props) => <SliceZone {...props} components={components} />}
       state={state}
     />
