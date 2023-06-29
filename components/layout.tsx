@@ -1,10 +1,10 @@
-import React from 'react'
-import Meta from '../components/meta'
-import Footer from '../components/Layouts/Footer'
-import Navbar from '../components/Layouts/Navbar'
+import React from "react";
+import Meta from "../components/meta";
+import Footer from "../components/Layouts/Footer";
+import Navbar from "../components/Layouts/Navbar";
 
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 function Layout({ children }: LayoutProps) {
@@ -17,6 +17,6 @@ function Layout({ children }: LayoutProps) {
       <main className="pt-16 ">{children}</main>
       <Footer />
     </>
-  )
+  );
 }
-export default Layout
+export default Layout;

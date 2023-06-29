@@ -1,11 +1,11 @@
-import React from 'react'
-import type { Content } from '@prismicio/client'
+import React from "react";
+import type { Content } from "@prismicio/client";
 
-import PostPreview from '../components/post-preview'
+import PostPreview from "../components/post-preview";
 
 type MoreStoriesProps = {
-  posts: Content.PostDocument[]
-}
+  posts: Content.PostDocument[];
+};
 
 export default function MoreStories({ posts }: MoreStoriesProps) {
   return (
@@ -27,5 +27,5 @@ export default function MoreStories({ posts }: MoreStoriesProps) {
         ))}
       </div>
     </section>
-  )
+  );
 }

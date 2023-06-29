@@ -1,17 +1,16 @@
-import { Content } from '@prismicio/client'
-import { ImageField, RelationField, TitleField } from '@prismicio/types'
+import * as prismic from "@prismicio/client";
 
-export type PostDocumentWithAuthor = Content.PostDocument & {
+export type PostDocumentWithAuthor = prismic.Content.PostDocument & {
   data: {
-    author: AuthorContentRelationshipField
-  }
-}
+    author: AuthorContentRelationshipField;
+  };
+};
 
-export type AuthorContentRelationshipField = RelationField<
-  'author',
+export type AuthorContentRelationshipField = prismic.ContentRelationshipField<
+  "author",
   string,
   {
-    name: TitleField
-    picture: ImageField
+    name: prismic.TitleField;
+    picture: prismic.ImageField;
   }
->
+>;

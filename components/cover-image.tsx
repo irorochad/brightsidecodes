@@ -1,14 +1,14 @@
-import React from 'react'
-import Link from 'next/link'
-import { PrismicNextImage } from '@prismicio/next'
-import { ImageField } from '@prismicio/types'
-import cn from 'classnames'
+import React from "react";
+import Link from "next/link";
+import { PrismicNextImage } from "@prismicio/next";
+import { ImageField } from "@prismicio/client";
+import cn from "classnames";
 
 type CoverImageProps = {
-  title: string
-  image: ImageField
-  href?: string
-}
+  title: string;
+  image: ImageField;
+  href?: string;
+};
 
 export default function CoverImage({
   title,
@@ -20,12 +20,12 @@ export default function CoverImage({
       field={imageField}
       width={2000}
       height={1000}
-      imgixParams={{ fit: 'crop', ar: '2:1' }}
-      className={cn('shadow-small', {
-        'hover:shadow-medium transition-shadow duration-200': href,
+      imgixParams={{ fit: "crop", ar: "2:1" }}
+      className={cn("shadow-small", {
+        "hover:shadow-medium transition-shadow duration-200": href,
       })}
     />
-  )
+  );
 
   return (
     <div className="sm:mx-0">
@@ -37,5 +37,5 @@ export default function CoverImage({
         image
       )}
     </div>
-  )
+  );
 }

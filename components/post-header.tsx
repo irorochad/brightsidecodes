@@ -1,21 +1,21 @@
-import React from 'react'
-import { PrismicText } from '@prismicio/react'
-import { asText, isFilled } from '@prismicio/helpers'
-import { DateField, ImageField, TitleField } from '@prismicio/types'
+import React from "react";
+import { PrismicText } from "@prismicio/react";
+import { asText, isFilled } from "@prismicio/helpers";
+import { DateField, ImageField, TitleField } from "@prismicio/client";
 
-import { AuthorContentRelationshipField } from '../lib/types'
+import { AuthorContentRelationshipField } from "../lib/types";
 
-import Avatar from '../components/avatar'
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
-import PostTitle from '../components/post-title'
+import Avatar from "../components/avatar";
+import Date from "../components/date";
+import CoverImage from "../components/cover-image";
+import PostTitle from "../components/post-title";
 
 type PostHeaderProps = {
-  title: TitleField
-  coverImage: ImageField
-  date: DateField
-  author: AuthorContentRelationshipField
-}
+  title: TitleField;
+  coverImage: ImageField;
+  date: DateField;
+  author: AuthorContentRelationshipField;
+};
 
 export default function PostHeader({
   title,
@@ -53,5 +53,5 @@ export default function PostHeader({
         </div>
       </div>
     </>
-  )
+  );
 }

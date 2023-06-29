@@ -1,19 +1,18 @@
-import React from 'react'
-import Head from 'next/head'
-import Container from '../../components/container'
-import MoreStories from '../../components/more-stories'
-import HeroPost from '../../components/hero-post'
-import { createClient } from '../../lib/prismic'
-import { PostDocumentWithAuthor } from '../../lib/types'
-import { GetStaticPropsContext, GetStaticPropsResult } from 'next'
+import React from "react";
+import Head from "next/head";
+import Container from "../../components/container";
+import MoreStories from "../../components/more-stories";
+import HeroPost from "../../components/hero-post";
+import { createClient } from "../../lib/prismic";
+import { PostDocumentWithAuthor } from "../../lib/types";
+import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 
 type IndexProps = {
-  preview: boolean
-  allPosts: PostDocumentWithAuthor[]
-}
+  allPosts: PostDocumentWithAuthor[];
+};
 
 export default function BlogPage({ allPosts }: IndexProps) {
-  const [heroPost, ...morePosts] = allPosts
+  const [heroPost, ...morePosts] = allPosts;
 
   return (
     <>
@@ -43,21 +42,20 @@ export default function BlogPage({ allPosts }: IndexProps) {
         </Container>
       </div>
     </>
-  )
+  );
 }
 
 export async function getStaticProps({
-  preview = false,
   previewData,
 }: GetStaticPropsContext): Promise<GetStaticPropsResult<IndexProps>> {
-  const client = createClient({ previewData })
+  const client = createClient({ previewData });
 
-  const allPosts = await client.getAllByType('post', {
-    fetchLinks: ['author.name', 'author.picture'],
-    orderings: [{ field: 'my.post.date', direction: 'desc' }],
-  })
+  const allPosts = await client.getAllByType("post", {
+    fetchLinks: ["author.name", "author.picture"],
+    orderings: [{ field: "my.post.date", direction: "desc" }],
+  });
 
   return {
-    props: { preview, allPosts },
-  }
+    props: { allPosts },
+  };
 }

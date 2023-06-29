@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -72,12 +72,12 @@ function Footer() {
               </h2>
               <ul className="text-gray-600 dark:text-bsc-dark-100 font-medium">
                 <li className="mb-4">
-                  <Link href="#" className="hover:underline">
+                  <Link href="/privacy-policy" className="hover:underline">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:underline">
+                  <Link href="/privacy-policy" className="hover:underline">
                     Terms &amp; Conditions
                   </Link>
                 </li>
@@ -87,15 +87,15 @@ function Footer() {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="text-sm text-gray-500 text-center dark:text-bsc-dark-100">
-          © 2023{' '}
-          <Link href="https://flowbite.com/" className="hover:underline">
+          © 2023{" "}
+          <Link href="/" className="hover:underline">
             Bright Side Codes
           </Link>
           . All Rights Reserved.
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
