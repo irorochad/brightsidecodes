@@ -2,4 +2,14 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # npx tsc --noEmit && npx eslint --fix . && npx prettier --write .
-npx lint-staged
+# npx lint-staged
+
+echo '⏳ Running lint-staged command ⏳'
+
+yarn lint-staged ||
+(
+	echo '❌ An error occurred. Please fix it/them and try again. ❌'
+	false; 
+)
+
+echo '✅ Successful Commit ✅'
