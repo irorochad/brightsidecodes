@@ -1,6 +1,5 @@
 import React from "react";
-import { asDate } from "@prismicio/client";
-import { DateField } from "@prismicio/client";
+import { asDate, DateField } from "@prismicio/client";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   month: "long",

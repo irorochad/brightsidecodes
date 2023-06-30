@@ -26,18 +26,12 @@ function Footer() {
               </h2>
               <ul className="text-gray-600 dark:text-bsc-dark-100 font-medium">
                 <li className="mb-4">
-                  <Link
-                    href="https://flowbite.com/"
-                    className="hover:underline"
-                  >
+                  <Link href="https://flowbite.com/" className="hover:underline">
                     Flowbite
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
+                  <Link href="https://tailwindcss.com/" className="hover:underline">
                     Tailwind CSS
                   </Link>
                 </li>
@@ -57,10 +51,7 @@ function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
-                  >
+                  <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">
                     Discord
                   </Link>
                 </li>

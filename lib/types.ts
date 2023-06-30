@@ -1,11 +1,5 @@
 import * as prismic from "@prismicio/client";
 
-export type PostDocumentWithAuthor = prismic.Content.PostDocument & {
-  data: {
-    author: AuthorContentRelationshipField;
-  };
-};
-
 export type AuthorContentRelationshipField = prismic.ContentRelationshipField<
   "author",
   string,
@@ -14,3 +8,9 @@ export type AuthorContentRelationshipField = prismic.ContentRelationshipField<
     picture: prismic.ImageField;
   }
 >;
+
+export type PostDocumentWithAuthor = prismic.Content.PostDocument & {
+  data: {
+    author: AuthorContentRelationshipField;
+  };
+};

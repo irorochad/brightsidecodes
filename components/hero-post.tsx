@@ -1,14 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { DateField, ImageField, TitleField } from "@prismicio/client";
+import { DateField, ImageField, TitleField, asText, isFilled } from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
-import { asText, isFilled } from "@prismicio/client";
 
 import { AuthorContentRelationshipField } from "../lib/types";
 
-import Avatar from "../components/avatar";
-import CoverImage from "../components/cover-image";
-import Date from "../components/date";
+import Avatar from "./avatar";
+import CoverImage from "./cover-image";
+import Date from "./date";
 
 type HeroPostProps = {
   title: TitleField;
@@ -46,10 +45,7 @@ export default function HeroPost({
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
           {isFilled.contentRelationship(author) && (
-            <Avatar
-              name={asText(author.data.name)}
-              picture={author.data.picture}
-            />
+            <Avatar name={asText(author.data.name)} picture={author.data.picture} />
           )}
         </div>
       </div>

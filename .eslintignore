@@ -1,6 +1,7 @@
 node_modules
 /node_modules
 /.next
-/*.config.js
+/_.config.js
 README.md
-/*.json
+/_.json
+types.generated.ts

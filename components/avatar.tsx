@@ -17,7 +17,7 @@ export default function Avatar({ name, picture }: AvatarProps) {
           src={imageUrl}
           alt="Avatar"
           className="rounded-full"
-          priority={true}
+          priority
           width={100}
           height={40}
         />

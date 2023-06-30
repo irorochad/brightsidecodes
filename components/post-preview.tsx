@@ -1,13 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { DateField, ImageField, TitleField } from "@prismicio/client";
+import { DateField, ImageField, TitleField, asText, isFilled } from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
-import { asText, isFilled } from "@prismicio/client";
 
 import { AuthorContentRelationshipField } from "../lib/types";
 
-import Avatar from "../components/avatar";
-import Date from "../components/date";
+import Avatar from "./avatar";
+import Date from "./date";
 
 import CoverImage from "./cover-image";
 
