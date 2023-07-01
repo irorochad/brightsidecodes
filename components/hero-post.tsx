@@ -1,13 +1,13 @@
-import React from "react";
-import Link from "next/link";
-import { DateField, ImageField, TitleField, asText, isFilled } from "@prismicio/client";
-import { PrismicText } from "@prismicio/react";
+import React from 'react';
+import Link from 'next/link';
+import { DateField, ImageField, TitleField, asText, isFilled } from '@prismicio/client';
+import { PrismicText } from '@prismicio/react';
 
-import { AuthorContentRelationshipField } from "../lib/types";
+import { AuthorContentRelationshipField } from '../lib/types';
 
-import Avatar from "./avatar";
-import CoverImage from "./cover-image";
-import Date from "./date";
+import Avatar from './avatar';
+import CoverImage from './cover-image';
+import Date from './date';
 
 type HeroPostProps = {
   title: TitleField;

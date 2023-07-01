@@ -1,6 +1,6 @@
-import { PrismicNextImage } from "@prismicio/next";
-import { SliceComponentProps } from "@prismicio/react";
-import { Content } from "@prismicio/client";
+import { PrismicNextImage } from '@prismicio/next';
+import { SliceComponentProps } from '@prismicio/react';
+import { Content } from '@prismicio/client';
 
 type ImageProps = SliceComponentProps<Content.ImageSlice>;
 

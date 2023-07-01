@@ -1,7 +1,7 @@
-import * as prismic from "@prismicio/client";
+import * as prismic from '@prismicio/client';
 
 export type AuthorContentRelationshipField = prismic.ContentRelationshipField<
-  "author",
+  'author',
   string,
   {
     name: prismic.TitleField;

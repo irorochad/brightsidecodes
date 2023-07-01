@@ -1,7 +1,7 @@
-import React from "react";
-import Meta from "./meta";
-import Footer from "./Layouts/Footer";
-import Navbar from "./Layouts/Navbar";
+import React from 'react';
+import Meta from './meta';
+import Footer from './Layouts/Footer';
+import Navbar from './Layouts/Navbar';
 
 interface LayoutProps {
   children: React.ReactNode;

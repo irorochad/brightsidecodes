@@ -1,7 +1,7 @@
-import React, { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import React, { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
 
-import { CiLight, CiDark } from "react-icons/ci";
+import { CiLight, CiDark } from 'react-icons/ci';
 
 function ThemeToggler() {
   const { theme, setTheme } = useTheme();
@@ -10,7 +10,7 @@ function ThemeToggler() {
   if (!mounted) return null;
 
   function handleSubmit() {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === 'light' ? 'dark' : 'light');
   }
 
   return (
@@ -22,7 +22,7 @@ function ThemeToggler() {
       focus:outline-none
     }"
     >
-      {theme === "light" ? (
+      {theme === 'light' ? (
         <CiDark className="text-4xl" />
       ) : (
         <CiLight className="text-4xl" />

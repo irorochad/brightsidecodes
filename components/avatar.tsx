@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import { ImageField } from "@prismicio/client";
+import React from 'react';
+import Image from 'next/image';
+import { ImageField } from '@prismicio/client';
 
 type AvatarProps = {
   name: string;

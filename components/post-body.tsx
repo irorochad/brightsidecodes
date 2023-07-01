@@ -1,12 +1,12 @@
-import React from "react";
-import { SliceZone } from "@prismicio/react";
+import React from 'react';
+import { SliceZone } from '@prismicio/react';
 
-import type { Content } from "@prismicio/client";
+import type { Content } from '@prismicio/client';
 
-import { components } from "../slices";
+import { components } from '../slices';
 
 type PostBodyProps = {
-  slices: Content.PostDocument["data"]["slices"];
+  slices: Content.PostDocument['data']['slices'];
 };
 
 export default function PostBody({ slices }: PostBodyProps) {

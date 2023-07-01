@@ -1,5 +1,5 @@
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-import { Content } from "@prismicio/client";
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react';
+import { Content } from '@prismicio/client';
 
 type TextProps = SliceComponentProps<Content.TextSlice>;
 

@@ -1,0 +1,7 @@
+/node*modules
+/.next
+/*.config.js
+README.md
+/\_.json
+slices
+types.generated.ts

@@ -1,13 +1,13 @@
-import React from "react";
-import { PrismicText } from "@prismicio/react";
-import { DateField, ImageField, TitleField, asText, isFilled } from "@prismicio/client";
+import React from 'react';
+import { PrismicText } from '@prismicio/react';
+import { DateField, ImageField, TitleField, asText, isFilled } from '@prismicio/client';
 
-import { AuthorContentRelationshipField } from "../lib/types";
+import { AuthorContentRelationshipField } from '../lib/types';
 
-import Avatar from "./avatar";
-import Date from "./date";
-import CoverImage from "./cover-image";
-import PostTitle from "./post-title";
+import Avatar from './avatar';
+import Date from './date';
+import CoverImage from './cover-image';
+import PostTitle from './post-title';
 
 type PostHeaderProps = {
   title: TitleField;

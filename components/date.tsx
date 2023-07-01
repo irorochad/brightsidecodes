@@ -1,10 +1,10 @@
-import React from "react";
-import { asDate, DateField } from "@prismicio/client";
+import React from 'react';
+import { asDate, DateField } from '@prismicio/client';
 
-const formatter = new Intl.DateTimeFormat("en-US", {
-  month: "long",
-  day: "numeric",
-  year: "numeric",
+const formatter = new Intl.DateTimeFormat('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
 });
 
 type DateProps = {

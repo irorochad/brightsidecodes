@@ -1,7 +1,7 @@
-import React from "react";
-import type { Content } from "@prismicio/client";
+import React from 'react';
+import type { Content } from '@prismicio/client';
 
-import PostPreview from "./post-preview";
+import PostPreview from './post-preview';
 
 type MoreStoriesProps = {
   posts: Content.PostDocument[];
