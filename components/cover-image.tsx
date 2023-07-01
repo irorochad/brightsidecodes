@@ -14,7 +14,7 @@ export default function CoverImage({ title, image: imageField, href }: CoverImag
   const image = (
     <PrismicNextImage
       field={imageField}
-      width={2000}
+      width={1000}
       height={1000}
       imgixParams={{ fit: 'crop', ar: '2:1' }}
       className={cn('shadow-small', {

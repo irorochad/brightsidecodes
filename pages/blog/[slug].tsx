@@ -9,7 +9,7 @@ import { PostDocumentWithAuthor } from '../../lib/types';
 import { createClient } from '../../lib/prismic';
 
 import Container from '../../components/container';
-import MoreStories from '../../components/more-stories';
+import MoreStories from '../../components/Blog/more-stories';
 import PostBody from '../../components/post-body';
 import PostHeader from '../../components/post-header';
 import PostTitle from '../../components/post-title';
