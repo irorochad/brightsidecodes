@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
-// import { useRouter } from 'next/router';
 import { filter, asImageSrc, asText } from '@prismicio/client';
 
 import { PostDocumentWithAuthor } from '../../lib/types';
@@ -17,7 +16,6 @@ type PostProps = {
 };
 
 export default function Post({ post, morePosts }: PostProps) {
-  // const router = useRouter();
   // to prevent passing many nodes, we define title in a const and pass only to const
   const metaTitle = `${asText(post.data.title)} | BSC`;
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { DateField, ImageField, TitleField, asText, isFilled } from '@prismicio/client';
-
+import { TruncateText } from '../../helpers/truncateText';
 import { AuthorContentRelationshipField } from '../../lib/types';
 import CoverImage from './cover-image';
 import AuthorAndDateCard from './AuthorAndDateCard';
@@ -29,10 +29,15 @@ export default function PostPreview({
       <div className="bg-white dark:bg-black py-5 px-3 rounded-b-xl">
         <span className="mt-1 flex flex-row text-darkPri font-bold">category</span>
         <h1 className="mt-1 text-blog-title font-bold text-bsc-light-400 hover:text-secondary dark:text-bsc-dark-100">
-          <Link href={href}>{asText(title)}</Link>
+          <Link href={href}>
+            {TruncateText({ text: asText(title), limit: 10 })}
+            {/* {asText(title)} */}
+          </Link>
         </h1>
         <Link href={href}>
-          <p className="mt-1 text-blog-text-light dark:text-blog-text-dark">{excerpt}</p>
+          <p className="mt-1 text-blog-text-light dark:text-blog-text-dark">
+            {TruncateText({ text: excerpt, limit: 20 })}
+          </p>
         </Link>
         {/* show this only if there's an author profile fetched. */}
         {isFilled.contentRelationship(author) && (
