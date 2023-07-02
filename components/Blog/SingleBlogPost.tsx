@@ -2,7 +2,7 @@ import React from 'react';
 
 import { PostDocumentWithAuthor } from '../../lib/types';
 
-import PostBody from '../post-body';
+import PostBody from './post-body';
 import PostHeader from './post-header';
 
 type PostProps = {

@@ -5,7 +5,7 @@ import { DateField, ImageField, TitleField, asText, isFilled } from '@prismicio/
 import { AuthorContentRelationshipField } from '../../lib/types';
 
 import AuthorAndDateCard from './AuthorAndDateCard';
-import CoverImage from '../cover-image';
+import CoverImage from './cover-image';
 
 type PostHeaderProps = {
   title: TitleField;

@@ -18,11 +18,12 @@ type PostProps = {
 
 export default function Post({ post, morePosts }: PostProps) {
   // const router = useRouter();
-
+  // to prevent passing many nodes, we define title in a const and pass only to const
+  const metaTitle = `${asText(post.data.title)} | BSC`;
   return (
     <div>
       <Head>
-        <title>{asText(post.data.title)} | Blog - BrightSideCodes</title>
+        <title>{metaTitle}</title>
         <meta
           property="og:image"
           content={asImageSrc(post.data.cover_image, {
@@ -35,6 +36,9 @@ export default function Post({ post, morePosts }: PostProps) {
       <article className="px-4 py-28 w-full md:w-[90%] mx-auto">
         <SingleBlogPost post={post} />
         <SectionSeparator />
+        <h1 className="mb-5 text-xl font-bold text-bsc-light-400 dark:text-bsc-dark-100">
+          Related Posts.
+        </h1>
         {morePosts && morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </article>
     </div>
