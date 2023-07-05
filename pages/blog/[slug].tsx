@@ -66,7 +66,7 @@ export async function getStaticProps({
       fetchLinks: ['author.name', 'author.picture'],
       orderings: [{ field: 'my.post.date', direction: 'desc' }],
       predicates: [filter.not('my.post.uid', params.slug)],
-      limit: 3,
+      limit: 2,
     }),
   ]);
 
@@ -87,6 +87,6 @@ export async function getStaticPaths() {
 
   return {
     paths: allPosts.map((post) => post.url),
-    fallback: true,
+    fallback: false,
   };
 }
