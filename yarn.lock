@@ -3098,7 +3098,7 @@
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
 
-"@slicemachine/adapter-next@^0.3.1":
+"@slicemachine/adapter-next@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@slicemachine/adapter-next/-/adapter-next-0.3.2.tgz#e68a2784d81ee02758188337d578df3c12962b4b"
   integrity sha512-UIb3NuRzAWXA9P3TwziUDQ2dX6jji77of9EFAgKc3fTK482YQMRB9YIZvcBMVpsUzzqCdZYEJqxbCmiXi02W8A==
@@ -9062,7 +9062,7 @@ slice-ansi@^5.0.0:
     ansi-styles "^6.0.0"
     is-fullwidth-code-point "^4.0.0"
 
-slice-machine-ui@^1.3.0:
+slice-machine-ui@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/slice-machine-ui/-/slice-machine-ui-1.4.0.tgz#2e20fdbfffc305047ad442b171561def3cbb8492"
   integrity sha512-gWDW1Bv03igJgxgkdPWMSg6D8AZ6KDLzIt1kO6SXgtWm2GwS6sebn3R1z4hPBjM7Zgb96fG4KJxoP8qzbGqMxQ==

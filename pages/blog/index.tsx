@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
 import Container from '../../components/container';
 import MoreStories from '../../components/Blog/more-stories';
-// import HeroPost from '../../components/hero-post';
 import { createClient } from '../../lib/prismic';
 import { PostDocumentWithAuthor } from '../../lib/types';
 
@@ -13,7 +12,6 @@ type IndexProps = {
 
 export default function BlogPage({ allPosts }: IndexProps) {
   // const [heroPost, ...morePosts] = allPosts;
-
   return (
     <div>
       <Head>
@@ -25,17 +23,6 @@ export default function BlogPage({ allPosts }: IndexProps) {
           <h1 className="text-4xl font-semibold">The Blog</h1>
           <p className="dark:text-darkPri">Where Ideas are Written and Distributed!</p>
         </div>
-        {/* {heroPost && (
-                        <HeroPost
-                            title={heroPost.data.title}
-                            href={heroPost.url}
-                            coverImage={heroPost.data.cover_image}
-                            date={heroPost.data.date}
-                            author={heroPost.data.author}
-                            excerpt={heroPost.data.excerpt}
-                        />
-                    )} */}
-        {/* {morePosts.length >= 0 && <MoreStories posts={morePosts} />} */}
         <MoreStories posts={allPosts} />
       </Container>
     </div>
