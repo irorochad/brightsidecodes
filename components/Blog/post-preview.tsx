@@ -34,11 +34,13 @@ export default function PostPreview({
             {/* {asText(title)} */}
           </Link>
         </h1>
-        <Link href={href}>
-          <p className="mt-1 text-blog-text-light dark:text-blog-text-dark">
-            {TruncateText({ text: excerpt, limit: 20 })}
-          </p>
-        </Link>
+        {excerpt && (
+          <Link href={href}>
+            <p className="mt-1 text-blog-text-light dark:text-blog-text-dark">
+              {TruncateText({ text: excerpt, limit: 20 })}
+            </p>
+          </Link>
+        )}
         {/* show this only if there's an author profile fetched. */}
         {isFilled.contentRelationship(author) && (
           <AuthorAndDateCard
