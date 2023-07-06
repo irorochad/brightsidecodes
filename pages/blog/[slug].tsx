@@ -88,6 +88,6 @@ export async function getStaticPaths() {
 
   return {
     paths: allPosts.map((post) => post.url),
-    fallback: false,
+    fallback: true,
   };
 }
