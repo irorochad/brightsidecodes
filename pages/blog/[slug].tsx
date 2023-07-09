@@ -1,5 +1,4 @@
 import React from 'react';
-import { notFound } from 'next/navigation';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
@@ -22,8 +21,8 @@ export default function Post({ post, morePosts }: PostProps) {
 
   if (router.isFallback) {
     return (
-      <h1 className="mt-10 text-xl font-bold text-bsc-light-400 dark:text-bsc-dark-100">
-        Related Posts.
+      <h1 className="mt-10 text-xl text-center font-bold text-bsc-light-400 dark:text-bsc-dark-100">
+        Fetching this page, don&apos;t sweat it!
       </h1>
     );
   }
@@ -74,10 +73,13 @@ export async function getStaticProps({
   ]);
 
   if (!post) {
-    notFound();
+    return {
+      notFound: true,
+    };
   }
   return {
     props: { post, morePosts },
+    revalidate: 1,
   };
 }
 
