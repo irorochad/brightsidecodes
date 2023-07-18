@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// import { MeiliSearch } from 'meilisearch';
-
 import { BiMenuAltRight } from 'react-icons/bi';
 import { IoMdClose } from 'react-icons/io';
-
 import ThemeToggler from '../ToggleTheme';
+import SearchBox from './SearchBox';
 
 function Navbar() {
+  const { asPath } = useRouter();
   const [nav, setNav] = useState(false);
 
   // code to make the navbar fixed when the user scroll.
@@ -27,6 +27,11 @@ function Navbar() {
     };
   }, [scrolled]);
 
+  // We use this useEffect to close the mobile navBar when a nav link is clicked.
+  useEffect(() => {
+    setNav(false);
+  }, [asPath]);
+
   const navigation = [
     { id: 1, title: 'Home', path: '/' },
     { id: 2, title: 'About', path: '/about' },
@@ -34,12 +39,6 @@ function Navbar() {
     { id: 4, title: 'Projects', path: '/project' },
     { id: 5, title: 'Blog', path: '/blog' },
   ];
-
-  // const client = new MeiliSearch({ host: 'http://localhost:7700' });
-  // client
-  //   .index('navigation')
-  //   .addDocuments(navigation)
-  //   .then((res) => console.log(res));
 
   return (
     <nav>
@@ -87,27 +86,7 @@ function Navbar() {
             </div>
           </div>
           {/* search */}
-          <div className="relative">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-400 left-3"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-            <input
-              type="search"
-              placeholder="Search"
-              className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"
-            />
-          </div>
+          <SearchBox />
           {/* nav links */}
           <div
             className={`absolute top-11  lg:static bg-white dark:bg-black lg:bg-inherit lg:dark:bg-inherit w-full h-screen lg:h-auto -ml-4 flex-1 pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 lg:-ml-0 ${
