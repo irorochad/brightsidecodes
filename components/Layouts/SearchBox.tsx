@@ -12,8 +12,10 @@ function SearchBox() {
   const { asPath } = useRouter();
 
   const client = new MeiliSearch({
-    host: 'http://localhost:7700',
-    apiKey: 'a5bD8E3fGhIjK9L1',
+    // host: 'http://localhost:7700',
+    // apiKey: 'a5bD8E3fGhIjK9L1',
+    host: 'https://ms-27424e841c3e-3448.sfo.meilisearch.io',
+    apiKey: 'ae5e81f961ec1881a96c016834142dcb86f05dcd',
   });
 
   const [blogContent, setBlogContent] = useState([]);
