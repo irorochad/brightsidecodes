@@ -1,35 +1,42 @@
-// import Link from 'next/link';
-// import Image from 'next/image';
-// import Skeleton from '@mui/material/Skeleton';
+import Link from 'next/link';
 
 type SearchBoxResultsProps = {
-  searching: boolean;
-  searchResults: [];
+  searchResults: any;
 };
-function SearchBoxResults({ searching, searchResults }: SearchBoxResultsProps) {
-  //   const { results, isLoading, error } = useConcurrentApiFetch(query, token);
-
-  // Process and render data
-  if (searching) {
-    return (
-      <div
-        className="w-full bg-rb-light-200 dark:bg-rb-dark-0
-      rounded-2xl p-6 mt-56 md:mt-4 absolute top-28 left-0 z-50"
-      >
-        <p>Loading...</p>
-        {/* {Array(3)
-          .fill(3)
-          .map(() => (
-            <Skeleton
-              key={nanoid()}
-              variant="rounded"
-              className="bg-rb-light-900 dark:bg-rb-dark-100 my-2 h-24"
-            />
-          ))} */}
-      </div>
-    );
-  }
-
-  return <div>The user search is: ...</div>;
+function SearchBoxResults({ searchResults }: SearchBoxResultsProps) {
+  return (
+    <div
+      className="w-full rounded-2xl max-h-300 md:max-h-96
+       overflow-y-auto   absolute  left-0 z-50 "
+    >
+      {searchResults.length ? (
+        <div className="pt-12 bg-secondBg dark:bg-slate-800 dark:text-blog-text-dark">
+          <h1 className="dark:text-darkPri text-center">Search Result</h1>
+          <div>
+            {searchResults.map((result) => (
+              <div
+                key={result.id}
+                className="bg-secondBg dark:bg-slate-800 dark:text-blog-text-dark"
+              >
+                <div className="">
+                  <Link href={`${result.url}`}>
+                    <div className="flex items-center gap-x-6 p-3 mb-3">
+                      <span className="text-lg ">{result.title}</span>
+                      <span className="text-base">{result.excerpt}</span>
+                    </div>
+                  </Link>
+                </div>
+                <hr />
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="py-12  bg-secondBg dark:bg-slate-800 dark:text-blog-text-dark">
+          <h1 className="dark:text-darkPri text-center">No results match your query.</h1>
+        </div>
+      )}
+    </div>
+  );
 }
 export default SearchBoxResults;
