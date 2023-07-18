@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { MeiliSearch } from 'meilisearch';
 import { useDebounce } from 'react-use';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-
+import { AiOutlineSearch } from 'react-icons/ai';
 import { createClient } from '../../lib/prismic';
 import SearchBoxResults from './SearchBoxResults';
 
 function SearchBox() {
+  const { asPath } = useRouter();
+
   const client = new MeiliSearch({
     host: 'http://localhost:7700',
     apiKey: 'a5bD8E3fGhIjK9L1',
@@ -16,6 +19,7 @@ function SearchBox() {
   const [blogContent, setBlogContent] = useState([]);
   const [searching, setIsSearching] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
+  const [showResults, setShowResults] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +39,6 @@ function SearchBox() {
           image: post.data.cover_image?.url || '', // Extract the URL of the cover_image or use an empty string if it doesn't exist
           url: post.url || '',
           date: post.first_publication_date,
-          // Add any other necessary fields here...
         }));
 
         setBlogContent(allPosts);
@@ -68,6 +71,7 @@ function SearchBox() {
         .search(debouncedKeyword)
         .then((res) => {
           setIsSearching(false);
+          setShowResults(true); // set the showResult to be true
           setSearchResults(res.hits);
         });
     },
@@ -81,22 +85,14 @@ function SearchBox() {
     setKeyword(inputValue);
   };
 
+  // useEffect to close the search results when results are clicked.
+  useEffect(() => {
+    setShowResults(false);
+  }, [asPath]);
+
   return (
     <div className="relative">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-400 left-3"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-        />
-      </svg>
+      <AiOutlineSearch className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-400 left-3" />
       <input
         type="search"
         id="search-bar-input"
@@ -113,7 +109,11 @@ function SearchBox() {
       )}
       {/* if the user stops typing, fetch and display the results. */}
       {!searching && isReady() && Boolean(debouncedKeyword.trim()) && (
-        <SearchBoxResults searchResults={searchResults} />
+        <div>
+          {/* when the show searchResult is true, show this. */}
+          {/* When the page mounts it's set to false so this SearchResults won't be shown */}
+          {showResults && <SearchBoxResults searchResults={searchResults} />}
+        </div>
       )}
     </div>
   );
