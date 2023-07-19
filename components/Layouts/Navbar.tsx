@@ -13,19 +13,19 @@ function Navbar() {
   const [nav, setNav] = useState(false);
 
   // code to make the navbar fixed when the user scroll.
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 100;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-    };
-    document.addEventListener('scroll', handleScroll);
-    return () => {
-      document.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrolled]);
+  // const [scrolled, setScrolled] = useState(false);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const isScrolled = window.scrollY > 100;
+  //     if (isScrolled !== scrolled) {
+  //       setScrolled(isScrolled);
+  //     }
+  //   };
+  //   document.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     document.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [scrolled]);
 
   // We use this useEffect to close the mobile navBar when a nav link is clicked.
   useEffect(() => {
@@ -41,7 +41,7 @@ function Navbar() {
   ];
 
   return (
-    <nav>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-opacity-10 backdrop-blur-md ">
       {/* Backdrop for mobile nav when opened */}
       {/* <button
         type="button"
@@ -52,12 +52,8 @@ function Navbar() {
       /> */}
       {/* End Backdrop */}
 
-      <section
-        className={`fixed w-full lg:text-sm transition-bg ease-in-out duration-500 z-50 ${
-          scrolled ? 'bg-white dark:bg-black' : 'bg-secondBg dark:bg-gray-900'
-        }`}
-      >
-        <div className="items-center px-4 max-w-screen-xl mx-auto lg:flex lg:px-8">
+      <section className="w-full lg:text-sm transition-bg ease-in-out duration-500 max-w-screen-xl mx-auto">
+        <div className=" items-center px-4  mx-auto lg:flex lg:px-8">
           <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
             <Link href="/">
               <Image

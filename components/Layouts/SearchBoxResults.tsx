@@ -5,10 +5,7 @@ type SearchBoxResultsProps = {
 };
 function SearchBoxResults({ searchResults }: SearchBoxResultsProps) {
   return (
-    <div
-      className="w-full rounded-2xl max-h-300 md:max-h-96
-       overflow-y-auto   absolute  left-0 z-50 "
-    >
+    <div className="max-h-96 w-full rounded-2xl overflow-y-auto  absolute z-50 ">
       {searchResults.length ? (
         <div className="pt-12 bg-secondBg dark:bg-slate-800 dark:text-blog-text-dark">
           <h1 className="dark:text-darkPri text-center">Search Result</h1>
