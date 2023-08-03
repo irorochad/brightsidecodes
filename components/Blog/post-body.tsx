@@ -2,7 +2,6 @@ import React from 'react';
 import { SliceZone } from '@prismicio/react';
 
 import type { Content } from '@prismicio/client';
-
 import { components } from '../../slices';
 
 type PostBodyProps = {

@@ -14,8 +14,8 @@ function SearchBox() {
   const client = new MeiliSearch({
     // host: 'http://localhost:7700',
     // apiKey: 'a5bD8E3fGhIjK9L1',
-    host: 'https://ms-27424e841c3e-3448.sfo.meilisearch.io',
-    apiKey: 'ae5e81f961ec1881a96c016834142dcb86f05dcd',
+    host: 'https://ms-0f6553a98499-4734.sfo.meilisearch.io',
+    apiKey: '417bc837d9a35bf74e058af3c7a624167618bd12',
   });
 
   const [blogContent, setBlogContent] = useState([]);
