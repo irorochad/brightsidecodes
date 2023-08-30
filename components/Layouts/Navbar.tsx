@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { IoMdClose } from 'react-icons/io';
 import ThemeToggler from '../ToggleTheme';
-import SearchBox from './SearchBox';
+// import SearchBox from './SearchBox';
 
 function Navbar() {
   const { asPath } = useRouter();
@@ -82,7 +82,7 @@ function Navbar() {
             </div>
           </div>
           {/* search */}
-          <SearchBox />
+          {/* <SearchBox /> */}
           {/* nav links */}
           <div
             className={`absolute top-11  lg:static bg-white dark:bg-black lg:bg-inherit lg:dark:bg-inherit w-full h-screen lg:h-auto -ml-4 flex-1 pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 lg:-ml-0 ${
