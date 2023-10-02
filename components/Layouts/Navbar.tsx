@@ -37,23 +37,11 @@ function Navbar() {
     { id: 1, title: 'Home', path: '/' },
     { id: 2, title: 'About', path: '/about' },
     { id: 3, title: 'Contact', path: '/contact' },
-    { id: 4, title: 'Projects', path: '/project' },
-    { id: 5, title: 'Blog', path: '/blog' },
   ];
 
   return (
     <Container>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-opacity-10 backdrop-blur-md ">
-        {/* Backdrop for mobile nav when opened */}
-        {/* <button
-        type="button"
-        onClick={() => setNav(!nav)}
-        className={`fixed navbar-backdrop h-full w-full z-40 ${
-          nav ? 'flex' : 'hidden'
-        }`}
-      /> */}
-        {/* End Backdrop */}
-
         <section className="w-full lg:text-sm transition-bg ease-in-out duration-500  mx-auto">
           <div className=" items-center px-4  mx-auto lg:flex lg:px-8">
             <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
@@ -109,14 +97,6 @@ function Navbar() {
                 <div className="space-y-3 items-center gap-x-6 lg:flex lg:space-y-0">
                   <li className="hidden lg:block">
                     <ThemeToggler />
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="block py-3 px-4 font-medium text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow lg:inline"
-                    >
-                      Get Started/
-                    </Link>
                   </li>
                 </div>
               </ul>
