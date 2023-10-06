@@ -4,55 +4,63 @@ import Image from 'next/image';
 
 function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="mt-20 bg-white dark:bg-gray-900">
       <div className="mx-auto w-full container p-4 sm:p-6">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex  -ml-10">
               <Image
                 src="/bsc.svg"
                 width={0}
                 height={0}
                 priority
-                alt="Logo"
-                className="w-48 -ml-5"
+                alt="Bright Side Logo"
+                className="w-48"
               />
             </Link>
+            <p className="text-gray-600 dark:text-bsc-dark-100 font-medium">
+              Bytes of Wisdom, One Click Away.
+            </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="mt-10 md:mt-0 grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Resources
+                BSC
               </h2>
               <ul className="text-gray-600 dark:text-bsc-dark-100 font-medium">
                 <li className="mb-4">
-                  <Link href="https://flowbite.com/" className="hover:underline">
-                    Flowbite
+                  <Link href="/about" className="hover:underline">
+                    About
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://tailwindcss.com/" className="hover:underline">
-                    Tailwind CSS
+                  <Link href="/contact" className="hover:underline">
+                    Contact
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
+                Social
               </h2>
               <ul className="text-gray-600 dark:text-bsc-dark-100 font-medium">
                 <li className="mb-4">
                   <Link
-                    href="https://github.com/themesberg/flowbite"
+                    target="_blank"
+                    href="https://twitter.com/iroro_chad"
                     className="hover:underline "
                   >
-                    Github
+                    Twitter
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">
-                    Discord
+                  <Link
+                    target="_blank"
+                    href="https://www.linkedin.com/in/irorochadere/"
+                    className="hover:underline"
+                  >
+                    LinkedIn
                   </Link>
                 </li>
               </ul>
@@ -68,7 +76,7 @@ function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy" className="hover:underline">
+                  <Link href="/tos" className="hover:underline">
                     Terms &amp; Conditions
                   </Link>
                 </li>
