@@ -41,7 +41,7 @@ function Navbar() {
 
   return (
     <Container>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-opacity-10 backdrop-blur-md ">
+      <nav className="fixed mx-auto container top-0 left-0 right-0 z-50 bg-opacity-20 backdrop-blur-lg ">
         <section className="w-full lg:text-sm transition-bg ease-in-out duration-500  mx-auto">
           <div className=" items-center px-4  mx-auto lg:flex lg:px-8">
             <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
@@ -51,7 +51,7 @@ function Navbar() {
                   width={120}
                   height={120}
                   priority
-                  alt="Logo"
+                  alt="Bright Side Logo"
                   className="w-48 -ml-5"
                 />
               </Link>
