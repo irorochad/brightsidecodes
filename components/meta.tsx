@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-export const HOME_OG_IMAGE_URL = '/bsc.svg';
-
 export default function Meta() {
+  const HOME_OG_IMAGE_URL =
+    'https://brightsidecodes.cdn.prismic.io/brightsidecodes/e6537789-4fdf-4c0a-ad2c-910f6888b531_bsc.svg';
   return (
     <Head>
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
@@ -18,7 +18,7 @@ export default function Meta() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content="Bright side codes - Bytes of Wisdom, One Click Away."
+        content="BrightSideCodes - Bytes of Wisdom, One Click Away."
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
