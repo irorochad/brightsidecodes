@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
+export const HOME_OG_IMAGE_URL = '/bsc.svg';
+
 export default function Meta() {
   return (
     <Head>
@@ -18,7 +20,7 @@ export default function Meta() {
         name="description"
         content="Bright side codes - Bytes of Wisdom, One Click Away."
       />
-      <meta property="og:image" content="/bsc.svg" />
+      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   );
 }
