@@ -53,6 +53,8 @@ function Navbar() {
                   priority
                   alt="Bright Side Logo"
                   className="w-48 -ml-5"
+                  placeholder="blur"
+                  blurDataURL="data:..."
                 />
               </Link>
               {/* mobile toggle and harmbuger iconsI */}

@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 import React from 'react';
 
 export default function ContactUs() {
-  const clickSubmitFormButton = () => {
-    alert('you just submitted a form');
-    // make sure to use formInk to get this done right!
-  };
+  // const clickSubmitFormButton = () => {
+  //   alert('you just submitted a form');
+  //   // make sure to use formInk to get this done right!
+  // };
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 lg:py-16  mx-auto max-w-screen-sm">
@@ -15,7 +16,11 @@ export default function ContactUs() {
           Got a technical issue? Want to send feedback about a thing? Need details about
           Business plan? Send that Message!
         </p>
-        <form className="space-y-8">
+
+        <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+          Kindly send an email to contact [@] brightsidecodes.com{' '}
+        </p>
+        {/* <form className="space-y-8">
           <div>
             <label
               htmlFor="email"
@@ -82,7 +87,7 @@ export default function ContactUs() {
           >
             Send message
           </button>
-        </form>
+        </form> */}
       </div>
     </section>
   );

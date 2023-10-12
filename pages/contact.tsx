@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div>
       <Head>
-        <title>About - Bright Side Codes</title>
+        <title>Contact - Bright Side Codes</title>
       </Head>
 
       <Container>

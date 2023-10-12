@@ -1,14 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Newsletter from '../Contact/NewsLetter';
+// import Newsletter from '../Contact/NewsLetter';
 
 function Footer() {
   return (
     <>
-      <div className="mt-10">
-        <Newsletter />
-      </div>
+      <div className="mt-10">{/* <Newsletter /> */}</div>
       <footer className="mt-20 bg-white dark:bg-gray-900">
         <div className="mx-auto w-full container p-4 sm:p-6">
           <div className="md:flex md:justify-between">
