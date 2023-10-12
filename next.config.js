@@ -6,7 +6,7 @@ module.exports = {
       {
         protocol: 'https',
         hostname: '**.prismic.io',
-        port: '',
+        // port: '',
         pathname: '/*/**',
       },
     ],
