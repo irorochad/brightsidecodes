@@ -19,6 +19,8 @@ export default function CoverImage({ title, image: imageField, href }: CoverImag
       height={1000}
       imgixParams={{ fit: 'crop', ar: '2:1' }}
       loading="lazy"
+      placeholder="blur"
+      blurDataURL="data:..."
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': href,
       })}

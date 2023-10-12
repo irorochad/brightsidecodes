@@ -40,6 +40,8 @@ export default function AboutUsPage() {
             alt=""
             width={90}
             height={90}
+            placeholder="blur"
+            blurDataURL="data:..."
           />
         </div>
       </div>
