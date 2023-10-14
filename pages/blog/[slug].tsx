@@ -28,19 +28,26 @@ export default function Post({ post, morePosts }: PostProps) {
   }
   // to prevent passing many nodes, we define title in a const and pass only to const
   const metaTitle = `${asText(post.data.title)} | BSC`;
+  const description = `${
+    post.data.excerpt as string
+  } | Read the latest news from brightsidecodes`;
 
   return (
     <div>
       <Head>
         <title>{metaTitle}</title>
-        <meta
-          property="og:image"
-          content={asImageSrc(post.data.cover_image, {
-            width: 1200,
-            height: 600,
-            fit: 'crop',
-          })}
-        />
+        <meta property="og:image" content={asImageSrc(post.data.cover_image)} />
+        <meta name="description" content={description} />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="metaTitle" />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={asImageSrc(post.data.cover_image)} />
+
+        <meta property="og:title" content={description} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={asImageSrc(post.data.cover_image)} />
+        <meta property="og:url" content={asImageSrc(post.data.cover_image)} />
       </Head>
       <article className="px-4 py-28 w-full md:w-[90%] mx-auto">
         <SingleBlogPost post={post} />

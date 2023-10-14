@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
 import Container from '../components/container';
 import MoreStories from '../components/Blog/more-stories';
@@ -14,10 +13,6 @@ export default function BlogPage({ allPosts }: IndexProps) {
   // const [heroPost, ...morePosts] = allPosts;
   return (
     <div>
-      <Head>
-        <title>Blog Posts - Bright Side Codes</title>
-      </Head>
-
       <Container>
         <div className="text-center mb-10 text-primary dark:text-bsc-dark-100 ">
           <h1 className="text-4xl font-semibold">The Blog</h1>
