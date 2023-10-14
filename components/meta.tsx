@@ -16,11 +16,19 @@ export default function Meta() {
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       <meta
         name="description"
         content="BrightSideCodes - Bytes of Wisdom, One Click Away."
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+
+      <meta
+        name="keywords"
+        content="coding, technical writing, reactjs, tutorial, web development, blog"
+      />
+      <title> Bright Side Codes - Bytes of Wisdom, One Click Away.</title>
     </Head>
   );
 }
