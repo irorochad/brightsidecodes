@@ -18,7 +18,7 @@ export default function ContactUs() {
         </p>
 
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-          Kindly send an email to contact [@] brightsidecodes.com{' '}
+          Kindly send an email to: contact [@] brightsidecodes.com{' '}
         </p>
         {/* <form className="space-y-8">
           <div>

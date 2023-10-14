@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "dev": "next dev --turbo",
+        "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "slicemachine": "start-slicemachine",
@@ -33,6 +33,7 @@
         "react-dom": "^18.2.0",
         "react-icons": "^4.10.1",
         "react-loading-skeleton": "^3.3.1",
+        "react-share": "^4.4.1",
         "react-use": "^17.4.0",
         "typescript": "*"
     },

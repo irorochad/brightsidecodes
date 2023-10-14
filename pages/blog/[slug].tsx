@@ -45,8 +45,8 @@ export default function Post({ post, morePosts }: PostProps) {
       <article className="px-4 py-28 w-full md:w-[90%] mx-auto">
         <SingleBlogPost post={post} />
         <SectionSeparator />
-        <h1 className="mb-5 text-xl font-bold text-bsc-light-400 dark:text-bsc-dark-100">
-          Related Posts.
+        <h1 className="mb-14 text-xl font-bold text-bsc-light-400 dark:text-bsc-dark-100">
+          Related Posts
         </h1>
         {morePosts && morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </article>

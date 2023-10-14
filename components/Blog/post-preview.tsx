@@ -28,7 +28,7 @@ export default function PostPreview({
       <CoverImage title={asText(title)} href={href} image={coverImage} />
 
       <div className="bg-white dark:bg-black py-5 px-3 rounded-b-xl">
-        <span className="mt-1 flex flex-row text-darkPri font-bold">category</span>
+        {/* <span className="mt-1 flex flex-row text-darkPri font-bold">category</span> */}
         <h1 className="mt-1 text-blog-title font-bold text-bsc-light-400 hover:text-secondary dark:text-bsc-dark-100">
           <Link href={href}>
             {TruncateText({ text: asText(title), limit: 10 })}
