@@ -14,9 +14,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "./pages",
+    "baseUrl": "src/pages",
     "paths": {
-      "@/components/*": ["components/*"]
+      "@/components/*": ["src/components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/index.css';
+import '../../styles/index.css';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';

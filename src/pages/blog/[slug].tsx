@@ -28,6 +28,7 @@ export default function Post({ post, morePosts }: PostProps) {
   }
   // to prevent passing many nodes, we define title in a const and pass only to const
   const metaTitle = `${asText(post.data.title)} | BSC`;
+  const metaPreviewContent = `${post.data.title[0].text.toString()} | New Article on brightsidecodes`;
   const description = `${
     post.data.excerpt as string
   } | Read the latest news from brightsidecodes`;
@@ -40,11 +41,11 @@ export default function Post({ post, morePosts }: PostProps) {
         <meta name="description" content={description} />
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="metaTitle" />
+        <meta name="twitter:title" content={metaPreviewContent} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={asImageSrc(post.data.cover_image)} />
 
-        <meta property="og:title" content={description} />
+        <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={asImageSrc(post.data.cover_image)} />
         <meta property="og:url" content={asImageSrc(post.data.cover_image)} />
