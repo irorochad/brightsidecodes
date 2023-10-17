@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import type { GetServerSidePropsContext } from 'next/types';
-import { fetchAllBlogPosts } from '../components/allPost';
+import { fetchAllBlogPosts } from '../src/components/allPost';
 
 // TODO: Change this with your website URL
 const WEBSITE_URL = 'https://brightsidecodes.com';

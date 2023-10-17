@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import Container from '../components/container';
-import AboutUsPage from '../components/About/about-us';
+import Container from '../src/components/container';
+import AboutUsPage from '../src/components/About/about-us';
 
 export default function AboutPage() {
   return (

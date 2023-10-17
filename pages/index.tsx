@@ -1,9 +1,9 @@
 import React from 'react';
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
-import Container from '../components/container';
-import MoreStories from '../components/Blog/more-stories';
-import { createClient } from '../lib/prismic';
-import { PostDocumentWithAuthor } from '../lib/types';
+import Container from '../src/components/container';
+import MoreStories from '../src/components/Blog/more-stories';
+import { createClient } from '../src/lib/prismic';
+import { PostDocumentWithAuthor } from '../src/lib/types';
 
 type IndexProps = {
   allPosts: PostDocumentWithAuthor[];

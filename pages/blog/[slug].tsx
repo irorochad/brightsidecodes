@@ -4,12 +4,12 @@ import { useRouter } from 'next/router';
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
 import { filter, asImageSrc, asText } from '@prismicio/client';
 
-import { PostDocumentWithAuthor } from '../../lib/types';
-import { createClient } from '../../lib/prismic';
+import { PostDocumentWithAuthor } from '../../src/lib/types';
+import { createClient } from '../../src/lib/prismic';
 
-import SingleBlogPost from '../../components/Blog/SingleBlogPost';
-import MoreStories from '../../components/Blog/more-stories';
-import SectionSeparator from '../../components/section-separator';
+import SingleBlogPost from '../../src/components/Blog/SingleBlogPost';
+import MoreStories from '../../src/components/Blog/more-stories';
+import SectionSeparator from '../../src/components/section-separator';
 
 type PostProps = {
   post: PostDocumentWithAuthor;

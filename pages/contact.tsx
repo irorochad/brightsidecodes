@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import Container from '../components/container';
-import ContactUs from '../components/Contact/contact-us';
+import Container from '../src/components/container';
+import ContactUs from '../src/components/Contact/contact-us';
 
 export default function AboutPage() {
   return (

@@ -8,11 +8,15 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
+function AnalyticsTagsFallback() {
+  return null; // or some placeholder content
+}
+
 function Layout({ children }: LayoutProps) {
   return (
     <>
       <Meta />
-      <Suspense>
+      <Suspense fallback={<AnalyticsTagsFallback />}>
         <AnalyticsTags />
       </Suspense>
 

@@ -4,8 +4,8 @@ import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import { PrismicPreview } from '@prismicio/next';
-import Layout from '../components/layout';
-import { repositoryName } from '../lib/prismic';
+import Layout from '../src/components/layout';
+import { repositoryName } from '../src/lib/prismic';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
