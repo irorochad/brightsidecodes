@@ -1,17 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import Container from '../src/components/container';
-import ContactUs from '../src/components/Contact/contact-us';
+import Container from '../components/container';
+import AboutUsPage from '../components/About/about-us';
 
 export default function AboutPage() {
   return (
     <div>
       <Head>
-        <title>Contact - Bright Side Codes</title>
+        <title>About - Bright Side Codes</title>
       </Head>
 
       <Container>
-        <ContactUs />
+        <AboutUsPage />
       </Container>
     </div>
   );

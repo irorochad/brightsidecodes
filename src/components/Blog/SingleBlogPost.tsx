@@ -21,6 +21,7 @@ type PostProps = {
 
 function SingleBlogPage({ post }: PostProps) {
   const postURL = `https://brightsidecodes.com${post.url}`;
+  console.log(post.data.title[0].text);
   return (
     <div className="w-full xl:w-11/12 mx-auto xl:col-span-2 space-y-7 text-blog-text-light dark:text-blog-text-dark">
       <div className="xl:-ml-12">
@@ -38,19 +39,23 @@ function SingleBlogPage({ post }: PostProps) {
         <div className="mb-10 xl:mb-0">
           <h3 className="pb-6">Share This Post!</h3>
           <div className="flex space-x-4">
-            <FacebookShareButton url={postURL} quote={post.data.title.toString()}>
+            <FacebookShareButton url={postURL} quote={post.data.title[0].text.toString()}>
               <FacebookIcon size={32} round />
             </FacebookShareButton>
 
-            <TwitterShareButton url={postURL} title={post.data.title.toString()}>
+            <TwitterShareButton url={postURL} title={post.data.title[0].text.toString()}>
               <TwitterIcon size={32} round />
             </TwitterShareButton>
 
-            <LinkedinShareButton url={postURL}>
+            <LinkedinShareButton url={postURL} title={post.data.title[0].text.toString()}>
               <LinkedinIcon size={32} round />
             </LinkedinShareButton>
 
-            <EmailShareButton url={postURL} subject={post.data.title.toString()} body="">
+            <EmailShareButton
+              url={postURL}
+              subject={post.data.title[0].text.toString()}
+              body=""
+            >
               <EmailIcon size={32} round />
             </EmailShareButton>
           </div>
