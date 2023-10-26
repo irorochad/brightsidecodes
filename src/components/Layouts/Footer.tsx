@@ -36,9 +36,14 @@ function Footer() {
                       About
                     </Link>
                   </li>
-                  <li>
+                  <li className="mb-4">
                     <Link href="/contact" className="hover:underline">
                       Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/sitemap.xml" className="hover:underline">
+                      Sitemap
                     </Link>
                   </li>
                 </ul>
