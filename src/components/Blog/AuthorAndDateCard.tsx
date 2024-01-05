@@ -13,7 +13,7 @@ interface AuthorDataProps {
 function AuthorAndDateCard({ authorImg, authorName, date }: AuthorDataProps) {
   return (
     <div className="mt-5 flex flex-row items-center ">
-      <Avatar size="md" src={authorImg.url} />
+      <Avatar size="md" src={authorImg.url} name={authorName} />
       <span className="ml-3 flex flex-row space-x-24 text-para-mobile dark:text-darkPri">
         <Link href="#/author" className="underline lg:no-underline">
           {' '}
