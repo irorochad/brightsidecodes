@@ -50,6 +50,17 @@ pnpm create next-app --example cms-prismic cms-prismic-app
 
 ## Configuration
 
+### Step 0. Create an env.local file in the root
+
+```bash
+PRISIMIC_API=https://yourdomain.cdn-provided-by-prismic
+
+```
+
+```bash
+PRISIMIC_REPO_NAME=your-repo-name
+```
+
 ### Step 1. Create an account and repository on Prismic
 
 First, create a Prismic account and repository with the following command:
